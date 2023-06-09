@@ -1,6 +1,6 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-       int maxSub = 0;
+         int maxSub = 0;
         int currentSub = 0;
         String currentString = "";
         HashSet<Character> characters = new HashSet<>();
@@ -29,14 +29,12 @@ class Solution {
                             currentString = currentString.substring(l + 1, currentString.length());
                             break;
                         }
+                        characters.remove(currentString.charAt(l));
                     }
 
                     currentString = currentString + s.charAt(i);
                     currentSub = currentString.length();
-                    characters.removeAll(characters);
-                    for (int k = 0; k < currentSub; k++) {
-                        characters.add(currentString.charAt(k));
-                    }
+
 
 
                     maxSub = Math.max(maxSub, currentSub);
@@ -50,5 +48,6 @@ class Solution {
             }
         }
         return maxSub;
+
     }
 }
