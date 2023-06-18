@@ -18,9 +18,7 @@ class Solution {
 
    private  int calculatePath(int i, int j,int[][] grid) {
         int totalPath = 0;
-        if(i<0  || j < 0 || i >= m || j >= n ){
-            return 0;
-        }
+        
 
         if(calculatedPath[i][j] != 0){
             return calculatedPath[i][j];
