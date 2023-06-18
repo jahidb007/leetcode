@@ -1,7 +1,7 @@
 class Solution {
     int mod = (int)(1e9+7);
     public int countPaths(int[][] grid) {
-         int m = grid.length;
+            int m = grid.length;
         int n = grid[0].length;
         int[][] calculatedPath = new int[m][n];
 
@@ -11,19 +11,19 @@ class Solution {
             }
         }
 
-        long totalPath = m * n;
+        int totalPath = m * n;
         for(int i = 0 ; i < m ; i++){
             for( int j = 0 ; j < n ; j++){
                 totalPath = (totalPath + calculatedPath[i][j])%mod;
             }
         }
 
-        return (int)totalPath;
+        return totalPath;
     }
 
-    private long calculatePath(int i, int j,int m, int n,int[][] grid,int[][] calculatedPath) {
+    private int calculatePath(int i, int j,int m, int n,int[][] grid,int[][] calculatedPath) {
      
-        long totalPath = 0;
+        int totalPath = 0;
         if(i<0  || j < 0 || i >= m || j >= n ){
             return 0;
         }
