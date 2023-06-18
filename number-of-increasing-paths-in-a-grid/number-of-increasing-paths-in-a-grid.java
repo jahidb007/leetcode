@@ -13,11 +13,11 @@ class Solution {
             }
         }
 
-       return ans + ( m * n);
+       return ans;
     }
 
    private  int calculatePath(int i, int j,int[][] grid) {
-        int totalPath = 0;
+        int totalPath = 1;
         
 
         if(calculatedPath[i][j] != 0){
@@ -27,7 +27,7 @@ class Solution {
         // calculate left
 
         if(j>0 && grid[i][j-1] > grid[i][j]){
-                totalPath++;
+              //  totalPath++;
                 totalPath = (totalPath + calculatePath(i,j-1,grid))%mod;
             
 
@@ -36,7 +36,7 @@ class Solution {
 
         // calculate right
         if(j<n-1 && grid[i][j+1] > grid[i][j]){
-                totalPath++;
+               // totalPath++;
                 totalPath = (totalPath +  calculatePath(i,j+1,grid))%mod;
             
         }
@@ -44,7 +44,7 @@ class Solution {
 
         //calculate up
         if(i>0 && grid[i-1][j] > grid[i][j]){
-                totalPath++;
+               // totalPath++;
                 totalPath = (totalPath +  calculatePath(i-1,j,grid))%mod;
             
         }
@@ -52,7 +52,7 @@ class Solution {
 
         //calculate down
         if(i<m-1 && grid[i+1][j] > grid[i][j]){
-                totalPath++;
+              //  totalPath++;
                 totalPath = (totalPath +  calculatePath(i+1,j,grid))%mod;
             
         }
