@@ -1,7 +1,6 @@
 class Solution {
     int mod = (int)(1e9+7);
      int[][] calculatedPath;
-     int[] result = new int[1];
      int m,n;
     public int countPaths(int[][] grid) {
              m = grid.length;
@@ -60,7 +59,6 @@ class Solution {
 
 
         calculatedPath[i][j] = (int) totalPath;
-        result[0] = (result[0] + totalPath)%mod;
         return totalPath;
     }
 }
