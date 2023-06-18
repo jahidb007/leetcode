@@ -4,7 +4,7 @@ class Solution {
             int m = grid.length;
         int n = grid[0].length;
         int[][] calculatedPath = new int[m][n];
-  Arrays.stream(calculatedPath).forEach(row -> Arrays.fill(row, -1));
+
         for(int i = 0 ; i < m ; i++){
             for (int j = 0 ; j < n ; j++){
                 calculatePath(i,j,m,n,grid,calculatedPath);
@@ -28,7 +28,7 @@ class Solution {
             return 0;
         }
 
-        if(calculatedPath[i][j] != -1){
+        if(calculatedPath[i][j] != 0){
             return calculatedPath[i][j];
         }
 
