@@ -7,13 +7,14 @@ class Solution {
              m = grid.length;
          n = grid[0].length;
        calculatedPath = new int[m][n];
+             int ans = 0;
         for(int i = 0 ; i < m ; i++){
             for (int j = 0 ; j < n ; j++){
-                calculatePath(i,j,grid);
+                 ans = (ans + calculatePath(i,j,grid))%mod;
             }
         }
 
-       return result[0] + (m * n);
+       return ans + ( m * n);
     }
 
    private  int calculatePath(int i, int j,int[][] grid) {
