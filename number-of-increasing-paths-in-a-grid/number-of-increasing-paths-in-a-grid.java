@@ -26,39 +26,35 @@ class Solution {
 
         // calculate left
 
-        if(j>0){
-            if(grid[i][j-1] > grid[i][j]){
+        if(j>0 && grid[i][j-1] > grid[i][j]){
                 totalPath++;
                 totalPath = (totalPath + calculatePath(i,j-1,grid))%mod;
-            }
+            
 
         }
 
 
         // calculate right
-        if(j<n-1){
-            if(grid[i][j+1] > grid[i][j]){
+        if(j<n-1 && grid[i][j+1] > grid[i][j]){
                 totalPath++;
                 totalPath = (totalPath +  calculatePath(i,j+1,grid))%mod;
-            }
+            
         }
 
 
         //calculate up
-        if(i>0){
-            if(grid[i-1][j] > grid[i][j]){
+        if(i>0 && grid[i-1][j] > grid[i][j]){
                 totalPath++;
                 totalPath = (totalPath +  calculatePath(i-1,j,grid))%mod;
-            }
+            
         }
 
 
         //calculate down
-        if(i<m-1){
-            if(grid[i+1][j] > grid[i][j]){
+        if(i<m-1 && grid[i+1][j] > grid[i][j]){
                 totalPath++;
                 totalPath = (totalPath +  calculatePath(i+1,j,grid))%mod;
-            }
+            
         }
 
 
