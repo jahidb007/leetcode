@@ -11,6 +11,9 @@ class Solution {
 
       private  boolean checkIfValid(String s, String substring) {
         boolean result = false;
+        if(s.length() % substring.length() !=0){
+            return false;
+        }
         if (s.equals(substring)) {
             return true;
         }
