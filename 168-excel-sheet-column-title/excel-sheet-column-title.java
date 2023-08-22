@@ -2,7 +2,7 @@ class Solution {
     public String convertToTitle(int columnNumber) {
         
         String s = "";
-        int j = convertIt(columnNumber, 1);
+        int j = length(columnNumber, 1);
 
         for (int i = j; i > 0; i--) {
 
@@ -22,13 +22,13 @@ class Solution {
         return s;
     }
 
-    private  int convertIt(int i, int j) {
+    private  int length(int i, int j) {
 
         if (i <= Math.pow(26, j)) {
             return j;
         }
 
-        return convertIt((int) (i - Math.pow(26, j)), j + 1);
+        return length((int) (i - Math.pow(26, j)), j + 1);
 
     }
 }
