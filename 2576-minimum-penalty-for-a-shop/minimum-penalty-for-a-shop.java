@@ -17,18 +17,7 @@ class Solution {
         int minCount = count;
 
         for (int i = 0; i < customers.length(); i++) {
-            if (i == 0) {
-                if (customers.charAt(0) == 'Y') {
-                    count--;
-             //       a[i + 1] = count;
-                    if(count < minCount){
-                        minCount = count;
-                        minHour = i +1;
-                    }
-
-                    continue;
-                }
-            }
+        
 
             if (customers.charAt(i) == 'Y') {
                 count--;
