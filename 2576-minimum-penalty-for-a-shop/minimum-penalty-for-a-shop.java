@@ -7,6 +7,11 @@ class Solution {
                 count++;
             }
         }
+        if(count == 0 ){
+            return count;
+        }
+
+
      //   a[0] = count;
         int minHour = 0;
         int minCount = count;
