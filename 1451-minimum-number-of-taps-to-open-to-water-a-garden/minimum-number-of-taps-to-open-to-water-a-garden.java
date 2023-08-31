@@ -6,7 +6,7 @@ class Solution {
             // check which got the i
             int mostRight = 0;
             int currentRight = 0;
-            for (int j = 0 ; j < ranges.length; j++) {
+            for (int j = (i == 0 ? i : (i/2)+1); j < ranges.length; j++) {
 
                 if (j == i) {
                     if (ranges[i] > 0) {
