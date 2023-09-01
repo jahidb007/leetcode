@@ -7,14 +7,13 @@ class Solution {
                   a[i] = 0;
                   continue;
               }
-
+            a[i] = 1 + a[i % divider];
             if( i % divider == (divider - 1)){
-                a[i] =  1 + a[i % divider];;
                 divider = divider * 2;
                 continue;
             }
 
-            a[i] = 1 + a[i % divider];
+           
             
 
         }
