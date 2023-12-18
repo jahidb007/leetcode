@@ -20,7 +20,6 @@ class Solution {
                 minB = nums[i];
             }
         }
-        System.gc();
         return (maxA * maxB) - (minA * minB);
     }
 }
