@@ -14,19 +14,12 @@ class Solution {
             }
 
             if(minA >= nums[i]){
-                System.out.println("current " + minA +" "+minB);
                 minB = minA;
                 minA = nums[i];
-                System.out.println("updated " + minA +" "+minB);
             }else if(minB >= nums[i]){
-                System.out.println("alternate current " + minA +" "+minB);
                 minB = nums[i];
-                System.out.println("alternate updated " + minA +" "+minB);
             }
-            System.out.println();
         }
-         System.out.println();
-        System.out.println(maxA +" "+maxB +" "+minA +" "+minB);
 
         return (maxA * maxB) - (minA * minB);
     }
