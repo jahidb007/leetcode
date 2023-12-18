@@ -5,7 +5,6 @@ class Solution {
            for(int j = 0 ; j < m + n ; j++){
 
                if(nums2[i] < nums1[j] || j >= m + t ){
-                System.out.println(nums2[i]);
                    for(int l = m + n -1 ; l > j ; l--){
                        nums1[l] = nums1[l-1];
                    }
