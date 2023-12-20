@@ -1,10 +1,26 @@
 class Solution {
     public int buyChoco(int[] prices, int money) {
-        Arrays.sort(prices);
+ 
 
-        if(prices.length == 0 || prices.length == 1 || prices[0] + prices[1] > money){
+        if(prices.length == 0 || prices.length == 1 ){
             return money;
-        }else return money - prices[0] - prices[1];
+        }
+        
+        int fl = Integer.MAX_VALUE;
+        int sl = Integer.MAX_VALUE ;
+
+        for(int i = 0 ; i < prices.length; i++){
+            if(fl >= prices[i]){
+                sl = fl;
+                fl = prices[i];
+            }else if (sl >= prices[i]){
+                sl = prices[i];
+            }
+        }
+
+        if( fl + sl <= money){
+            return money - fl - sl;
+        }else return money;
 
         
 
