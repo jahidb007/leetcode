@@ -12,25 +12,19 @@ class Solution {
 
         int tempMax = 0;
         int tempVal = 0;
-        for(int i = 0 ; i < nums.length - 1; i++){
-            if(nums[i] == nums[i+1]){
+        
+        for(int i = 1 ; i < nums.length ; i++){
+            if(nums[i] == nums[i-1]){
                 tempMax++;
                 tempVal = nums[i];
             }else{
+                tempMax = 0;
+                tempVal = 0;
+            }
                 if(tempMax > currMax){
                     currMax = tempMax;
                     currVal = tempVal;
-                     tempMax = 0;
-                     tempVal = 0;
                 }
-            }
-        }
-
-         if(tempMax > currMax){
-            currMax = tempMax;
-            currVal = tempVal;
-            tempMax = 0;
-            tempVal = 0;
         }
 
 
