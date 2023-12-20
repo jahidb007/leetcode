@@ -1,8 +1,9 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
 
-        if(nums.length < 3){
-            return nums.length;
+        int len = nums.length;
+        if(len < 3){
+            return len;
         }
 
         int index = 1;
@@ -11,7 +12,7 @@ class Solution {
 
         int lv = nums[0];
 
-        for(int i = 1; i < nums.length; i++ ){
+        for(int i = 1; i < len; i++ ){
 
             if( lv == nums[i] && match == 0){
                 nums[index] = nums[i];
