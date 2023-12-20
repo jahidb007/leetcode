@@ -10,19 +10,16 @@ class Solution {
 
         int match = 0;
 
-        int lv = nums[0];
-
         for(int i = 1; i < len; i++ ){
 
-            if( lv == nums[i] && match == 0){
-                nums[index] = nums[i];
-                index++;
-                match++;
-            }else if( lv != nums[i]){
+            if( nums[i] != nums[i-1]){
                 nums[index] = nums[i];
                 index++;
                 match = 0;
-                lv = nums[i];
+            }else if( match == 0){
+                nums[index] = nums[i];
+                index++;
+                match++;
             }
 
         }
