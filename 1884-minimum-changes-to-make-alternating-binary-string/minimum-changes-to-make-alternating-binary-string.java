@@ -10,10 +10,8 @@ class Solution {
         for(int i = 1; i < s.length(); i++){
             Character next = s.charAt(i);
             if(prev == next){
-                System.out.println(i + " "+prev );
                 step++;
                 prev = prev == '0' ? '1' : '0';
-                System.out.println(i + " "+prev );
             }else prev = next;
         }
 
@@ -22,10 +20,8 @@ class Solution {
         for(int i = 1; i < s.length(); i++){
             Character next = s.charAt(i);
             if(prev == next){
-                System.out.println(i + " "+prev );
                 stepT++;
                 prev = prev == '0' ? '1' : '0';
-                System.out.println(i + " "+prev );
             }else prev = next;
         }
         
