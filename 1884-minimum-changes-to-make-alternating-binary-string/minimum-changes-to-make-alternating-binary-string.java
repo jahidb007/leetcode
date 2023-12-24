@@ -4,9 +4,9 @@ class Solution {
         if(s.length() == 1){
             return 0;
         }
-        
-        int step1 = count(s, s.charAt(0));
-        int step2  = count(s,s.charAt(0) == '0' ? '1' : '0') + 1;
+        Character c = s.charAt(0);
+        int step1 = count(s, c);
+        int step2  = count(s,c == '0' ? '1' : '0') + 1;
         
         return Math.min(step1,step2);
         
