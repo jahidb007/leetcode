@@ -1,10 +1,5 @@
 class Solution {
-    public int minOperations(String s) {
-
-        if(s.length() == 1){
-            return 0;
-        }
-        
+    public int minOperations(String s) { 
         char prev = s.charAt(0);
         int step = 0;
         for(int i = 1; i < s.length(); i++){
