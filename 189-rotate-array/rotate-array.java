@@ -6,8 +6,8 @@ class Solution {
             return;
         }
 for(int i = 0 ; i < nums.length; i++){
-    if(dp[i] ==0) rotateRecur(nums,i, k, i,dp);
-       
+    if(dp[i] ==0) rotateRecur(nums,i, k, i,dp);  
+    else break;
 }
 
 
