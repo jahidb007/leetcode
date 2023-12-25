@@ -19,7 +19,7 @@ class Solution {
         int result = 0;
         char f = s.charAt(i);
 
-        if (f - '0' != 0) {
+        if (f  != '0' ) {
             result = decode(s, dp, i + 1);
         } else return 0;
 
@@ -32,7 +32,7 @@ class Solution {
             }
 
         }
-        
+
         dp[i] = result;
         
         return result;
