@@ -29,7 +29,7 @@ class Solution {
             int sc = s.charAt(i+1) - '0';
 
             if ( (fc * 10 + sc) < 27) {
-                System.out.println(fc +" "+sc);
+              //  System.out.println(fc +" "+sc);
                 result = result + decode(s, dp, i + 2);
             }
 
