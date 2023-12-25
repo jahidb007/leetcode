@@ -8,7 +8,7 @@ class Solution {
     public  int decode(String s, int[] dp, int i){
         int len = s.length();  
 
-        if (len <= i) {
+        if (len == i) {
             return 1;
         }
         
