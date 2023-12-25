@@ -25,14 +25,14 @@ class Solution {
 
 
         if (i + 1 < s.length()) {
-             int fn = Integer.valueOf(s.substring(i, i + 2));
+            char fs = s.charAt(i + 1);
 
-            if (fn > 0 && fn < 27) {
+            if (f == '1' || ( f == '2' && fs <= '6')) {
                 result = result + decode(s, dp, i + 2);
             }
 
         }
-
+        
         dp[i] = result;
         
         return result;
