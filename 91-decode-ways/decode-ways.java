@@ -25,11 +25,9 @@ class Solution {
 
 
         if (i + 1 < s.length()) {
-            int fc = s.charAt(i) - '0';
-            int sc = s.charAt(i+1) - '0';
+             int fn = Integer.valueOf(s.substring(i, i + 2));
 
-            if ( (fc * 10 + sc) < 27) {
-              //  System.out.println(fc +" "+sc);
+            if (fn > 0 && fn < 27) {
                 result = result + decode(s, dp, i + 2);
             }
 
