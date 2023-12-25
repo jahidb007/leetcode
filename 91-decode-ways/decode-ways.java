@@ -6,9 +6,9 @@ class Solution {
     
 
     public  int decode(String s, int[] dp, int i){
-            
+        int len = s.length();  
 
-        if (s.length() <= i) {
+        if (len <= i) {
             return 1;
         }
         
@@ -24,7 +24,7 @@ class Solution {
         } else return 0;
 
 
-        if (i + 1 < s.length()) {
+        if (i + 1 < len) {
             char fs = s.charAt(i + 1);
 
             if (f == '1' || ( f == '2' && fs <= '6')) {
