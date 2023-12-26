@@ -1,6 +1,6 @@
 class Solution {
      final static int mod = (int) Math.pow(10, 9) + 7;
-     
+
     public int numRollsToTarget(int n, int k, int target) {
 
         int result = 0;
@@ -42,6 +42,7 @@ class Solution {
         int result = 0;
 
         for(int i = 1; i <= k ; i++){
+             if (target < i) break;
             result = (result + rollRec(n - 1, k, target - i, dp)) % mod;
         }
 
