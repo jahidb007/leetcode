@@ -13,6 +13,7 @@ class Solution {
 
 
         for(int i = 1; i <= k ; i++){
+              if (target < i) break;
             result = (result + rollRec(n - 1, k, target - i, dp))% mod; ;
         }
 
