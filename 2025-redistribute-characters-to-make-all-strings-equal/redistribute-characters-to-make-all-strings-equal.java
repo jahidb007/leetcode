@@ -1,5 +1,9 @@
 class Solution {
     public boolean makeEqual(String[] words) {
+         if (words.length == 1) {
+			return true;
+		}
+        
          int[] chr = new int[26];
         for(String word : words){
 
