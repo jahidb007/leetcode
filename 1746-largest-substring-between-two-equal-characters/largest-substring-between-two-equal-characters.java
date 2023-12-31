@@ -7,10 +7,10 @@ class Solution {
 
         for(int i = 0 ; i < h; i++){
             
-            if(chr[s.charAt(i)][0] == 0){
-                chr[s.charAt(i) ][0] = i+1;
+            if(chr[s.charAt(i) - 'a'][0] == 0){
+                chr[s.charAt(i) - 'a' ][0] = i+1;
             }else{
-                res = Math.max(res, i - chr[s.charAt(i)][0]);
+                res = Math.max(res, i - chr[s.charAt(i) - 'a'][0]);
             }
 
            
