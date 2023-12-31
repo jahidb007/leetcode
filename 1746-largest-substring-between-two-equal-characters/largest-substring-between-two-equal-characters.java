@@ -3,7 +3,7 @@ class Solution {
         int res = -1;
         int h = s.length();
 
-        int[][] chr = new int[10000][1];
+        int[][] chr = new int[26][1];
 
         for(int i = 0 ; i < h; i++){
             
