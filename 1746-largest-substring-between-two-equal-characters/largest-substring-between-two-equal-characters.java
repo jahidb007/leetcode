@@ -5,11 +5,6 @@ class Solution {
 
         int[][] chr = new int[10000][1];
 
-        for(int i = 0 ; i < 26 ; i++){
-          chr[i][0] = -1; 
-        }
-        
-
         for(int i = 0 ; i < h; i++){
             
             if(chr[s.charAt(i)][0] == 0){
