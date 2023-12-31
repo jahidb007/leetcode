@@ -3,7 +3,7 @@ class Solution {
         int res = -1;
         int h = s.length();
 
-        int[][] chr = new int[26][1];
+        int[][] chr = new int[10000][1];
 
         for(int i = 0 ; i < 26 ; i++){
           chr[i][0] = -1; 
@@ -12,10 +12,10 @@ class Solution {
 
         for(int i = 0 ; i < h; i++){
             
-            if(chr[s.charAt(i) - 'a'][0] == -1){
-                chr[s.charAt(i) - 'a'][0] = i;
+            if(chr[s.charAt(i)][0] == 0){
+                chr[s.charAt(i) ][0] = i+1;
             }else{
-                res = Math.max(res, i - chr[s.charAt(i) - 'a'][0] - 1);
+                res = Math.max(res, i - chr[s.charAt(i)][0]);
             }
 
            
