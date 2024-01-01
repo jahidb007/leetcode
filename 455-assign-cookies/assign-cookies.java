@@ -1,6 +1,9 @@
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
         
+        int slength = s.length;
+        int glength = g.length;
+
         if(s.length ==0){
             return 0;
         }
@@ -11,11 +14,9 @@ class Solution {
         int cnt = 0;
         int sidx = 0;
 
-        for(int i = 0 ; i < g.length; i++){
-
-            if(sidx == s.length) break;
+        for(int i = 0 ; i < glength; i++){
         
-            for(int j = sidx ; j < s.length; j++){
+            for(int j = sidx ; j < slength; j++){
                 if(g[i] <= s[j]){
                     cnt++;
                     sidx = j+1;
