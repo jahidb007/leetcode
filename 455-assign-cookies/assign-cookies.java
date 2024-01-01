@@ -3,16 +3,20 @@ class Solution {
 
         Arrays.sort(g);
         Arrays.sort(s);
-        int i = g.length - 1, j = s.length - 1;
-        int c = 0;
-        while(i >= 0 && j >= 0){
-            if(g[i] <= s[j]){
-                j--;
-                c++;
-            }
-            i--;
-        }
 
-        return c;
+        int cnt = 0;
+        int sidx = s.length - 1;
+
+        for(int i = g.length - 1 ; i >= 0; i--){
+          if(sidx < 0){
+              break;
+          }
+            if(g[i] <= s[sidx]){
+                cnt++;
+                sidx--;
+            }
+           
+        }
+        return cnt;
     }
 }
