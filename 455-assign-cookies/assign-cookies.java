@@ -10,7 +10,13 @@ class Solution {
             int idx = -1;
 
             for(int j = 0 ; j < s.length; j++){
-                if(g[i] <= s[j]){
+
+                if(g[i] == s[j]){
+                    idx = j;
+                    break;
+                }
+
+                if(g[i] < s[j]){
                     
                     if(ckis > s[j]){
                        ckis = s[j];
