@@ -1,37 +1,24 @@
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
         
-        // 
+        Arrays.sort(g);
+        Arrays.sort(s);
+
         int cnt = 0;
+        int sidx = 0;
 
-        for(int i = 0 ; i < g.length ; i++){
-            
-            int ckis =  Integer.MAX_VALUE;
-            int idx = -1;
+        for(int i = 0 ; i < g.length; i++){
 
-            for(int j = 0 ; j < s.length; j++){
-
-                if(g[i] == s[j]){
-                    idx = j;
+            for(int j = sidx ; j < s.length; j++){
+                if(g[i] <= s[j]){
+                    cnt++;
+                    sidx = j+1;
                     break;
                 }
-
-                if(g[i] < s[j]){
-                    
-                    if(ckis > s[j]){
-                       ckis = s[j];
-                       idx = j; 
-                    }
-                }
             }
-                if(idx != -1){
-                    s[idx] = -1;
-                    cnt++;
-                }
         }
-
         return cnt;
-        
     }
 }
+
 
