@@ -12,6 +12,8 @@ class Solution {
         int sidx = 0;
 
         for(int i = 0 ; i < g.length; i++){
+
+            if(sidx == s.length) break;
         
             for(int j = sidx ; j < s.length; j++){
                 if(g[i] <= s[j]){
