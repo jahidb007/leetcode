@@ -9,14 +9,14 @@ class Solution {
             
             int j = map[nums[i]];
             
-            if(list.size() < j + 1){
+            if(list.size() <= j){
                 list.add(new ArrayList());
             }
 
             list.get(j).add(nums[i]);
             map[nums[i]] = j + 1;
         }
-            
+
         return list;
     }
 }
