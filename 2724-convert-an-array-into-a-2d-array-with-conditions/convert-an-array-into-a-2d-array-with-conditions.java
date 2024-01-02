@@ -3,7 +3,7 @@ class Solution {
        int[] map = new int[nums.length + 1];
 
         List<List<Integer>> list = new ArrayList<>();
-      //  list.add(new ArrayList());
+        list.add(new ArrayList());
         
         for(int i = 0 ; i < nums.length; i++){
             
