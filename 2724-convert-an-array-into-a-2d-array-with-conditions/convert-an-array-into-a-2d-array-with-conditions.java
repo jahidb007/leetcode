@@ -12,7 +12,7 @@ class Solution {
             }
 
             list.get(map[nums[i]]).add(nums[i]);
-            map[nums[i]] = map[nums[i]] + 1;
+            map[nums[i]]++;
         }
 
         return list;
