@@ -3,7 +3,7 @@ class Solution {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         List<List<Integer>> list = new ArrayList<>();
-
+         list.add(new ArrayList());
         for(int i = 0 ; i < nums.length; i++){
 
             if(map.containsKey(nums[i])){
@@ -16,10 +16,7 @@ class Solution {
                 map.put(nums[i], j + 1);
             }else{
                 map.put(nums[i],1);
-
-                if(list.size() < 1){
-                    list.add(new ArrayList());
-                }
+                
                 list.get(0).add(nums[i]);
 
             }
