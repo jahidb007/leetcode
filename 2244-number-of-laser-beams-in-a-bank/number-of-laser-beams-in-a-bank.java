@@ -2,9 +2,8 @@ class Solution {
     public int numberOfBeams(String[] bank) {
         int count = 0;
         int m = 0;
-        int n = 0;
-        int bl = bank.length;
-        for(int i = 0 ; i < bl; i++){
+
+        for(int i = 0 ; i < bank.length; i++){
             
             int laser = 0;
             for(Character c : bank[i].toCharArray()){
@@ -12,10 +11,11 @@ class Solution {
             }
 
 
-            if(laser != 0){
+            if(laser == 0) continue;
+            
                 count +=  m * laser;
                 m = laser;
-            }
+           
         }
 
 
