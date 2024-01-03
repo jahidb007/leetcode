@@ -5,8 +5,9 @@ class Solution {
         
         for(int i = 0 ; i < bank.length; i++){
             
-            int laser = calcLaser(bank[i]);
-
+            int laser = 0;
+            for(char c : bank[i].toCharArray()) 
+            laser += c - '0';
 
             if(laser != 0){
                 count +=  m * laser;
@@ -20,11 +21,4 @@ class Solution {
 
     }
 
-     private int calcLaser(String s) {
-        int count = 0;
-        for(char c : s.toCharArray()) 
-            count += c - '0';
-
-        return count;
-    } 
 }
