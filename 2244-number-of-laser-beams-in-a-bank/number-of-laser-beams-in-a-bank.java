@@ -15,9 +15,8 @@ class Solution {
 
 
             if(laser != 0){
-                n = laser;
-                count +=  m * n;
-                m = n;
+                count +=  m * laser;
+                m = laser;
             }
         }
 
