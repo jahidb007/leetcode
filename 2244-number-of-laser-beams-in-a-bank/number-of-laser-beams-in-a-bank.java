@@ -8,9 +8,7 @@ class Solution {
             
             int laser = 0;
             for(Character c : bank[i].toCharArray()){
-                if(c == '1'){
-                    laser++;
-                }
+                laser += c - '0';
             }
 
 
