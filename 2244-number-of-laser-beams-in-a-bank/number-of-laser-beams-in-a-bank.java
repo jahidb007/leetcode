@@ -1,6 +1,8 @@
 class Solution {
     public int numberOfBeams(String[] bank) {
-
+        int count = 0;
+        int m = 0;
+        int n = 0;
         int bl = bank.length;
         int[] data = new int[bl];
         for(int i = 0 ; i < bl; i++){
@@ -11,20 +13,13 @@ class Solution {
                 }
             }
             data[i] = laser;
+            if(laser != 0){
+                n = laser;
+                count = count + m * n;
+                m = n;
+            }
         }
-
-        int laser = 0;
-
-        for(int i = 0; i < bl - 1 ; i++){
-           for(int j = i+1; j < bl ; j++){
-               if( data[j] != 0 ){
-                   laser = laser + data[i] * data[j];
-                   break;
-               }
-           }
-        }
-
-        return laser;
+        return count;
 
 
     }
