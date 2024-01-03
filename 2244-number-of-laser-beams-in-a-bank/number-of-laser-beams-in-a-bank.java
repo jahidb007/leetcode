@@ -6,7 +6,7 @@ class Solution {
         for(int i = 0 ; i < bank.length; i++){
             
             int laser = 0;
-            for(char c : bank[i].toCharArray()){
+            for(Character c : bank[i].toCharArray()){
                 laser += c - '0';
             }
 
