@@ -24,19 +24,6 @@ class Solution {
         
     }
 
-    public boolean circulate(int i , int pos, int t, int[] gas, int[] cost, int l){
-        if(i == pos) return true;
-
-        t = t + gas[pos] - cost[pos];
-
-        if(t < 0){
-            return false;
-        }
-
-        return circulate(i, (pos + 1) % l, t, gas, cost, l);
-
-    }
-
 }
 //-----------------------------
 //[1,2,3,4,5]
@@ -44,4 +31,3 @@ class Solution {
 
 //[-2,-2,-2,6,1,-10,3,4,2,3] >=0
 //-----------------------------
-
