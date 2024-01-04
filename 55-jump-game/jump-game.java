@@ -20,10 +20,11 @@ class Solution {
 
     public boolean canReach(int pos, int[] nums, int[] dp){
          
-        if(pos >= nums.length - 1) return true;
-        if(pos + nums[pos] >= nums.length - 1) return true;
+        if(pos >= nums.length - 1 || pos + nums[pos] >= nums.length - 1) return true;
 
         if(dp[pos] == -1) return false;
+
+        if(nums[pos] == 0 ) return false;
 
         boolean reached = false;
         for(int j = 1 ; j <= nums[pos]; j++){ 
