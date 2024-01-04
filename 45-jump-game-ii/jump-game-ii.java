@@ -23,15 +23,16 @@ class Solution {
         if(k >= nums.length - 1){
             return 0;
         }
-
+        if(dp[k] != Integer.MAX_VALUE){
+                    return dp[k];
+        }
+        
         if(k + nums[k]  >= nums.length - 1){
             dp[k] = 1;
             return 1;
         }
 
-        if(dp[k] != Integer.MAX_VALUE){
-            return dp[k];
-        }
+        
 
         int res = Integer.MAX_VALUE;
 
