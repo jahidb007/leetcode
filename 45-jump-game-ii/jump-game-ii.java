@@ -24,6 +24,11 @@ class Solution {
             return 0;
         }
 
+        if(k + nums[k]  >= nums.length - 1){
+            dp[k] = 1;
+            return 1;
+        }
+
         if(dp[k] != Integer.MAX_VALUE){
             return dp[k];
         }
