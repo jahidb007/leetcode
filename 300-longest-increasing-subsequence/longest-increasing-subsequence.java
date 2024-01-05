@@ -39,6 +39,11 @@ class Solution {
 
         int c = 1;
         for(int j = idx+1; j < nums.length; j++){
+
+            if(c > nums.length -1 - idx){
+                break;
+            }
+
             if(nums[idx] < nums[j]){
                 c = Math.max(c, 1 + counter(j, nums, dp));
             }
