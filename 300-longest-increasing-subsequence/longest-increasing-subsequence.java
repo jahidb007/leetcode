@@ -7,7 +7,16 @@ class Solution {
         int count = 1;
 
         for(int i = 0 ; i < l-1 ; i++){
-         for(int j = i+1; j < l ; j++){
+
+            if(count > l -1 - i){
+                break;
+            }
+
+            if(dp[i] != 0){
+                count = Math.max(count, dp[i]);
+                continue;
+            }
+         for(int j = i+1 ; j < l ; j++){
 
              if(nums[i] < nums[j]){
                  count = Math.max(count,1 + counter(j, nums, dp, l));
@@ -29,7 +38,7 @@ class Solution {
         }
 
         int c = 1;
-        for(int j = idx+1; j < l; j++){
+        for(int j = idx+1 ; j < l ; j++){
 
             if(c > l -1 - idx){
                 break;
