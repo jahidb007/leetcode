@@ -7,6 +7,11 @@ class Solution {
         int count = 1;
 
         for(int i = 0 ; i < l-1 ; i++){
+
+            if(count > l -1 - i){
+                break;
+            }
+
             if(dp[i] != 0){
                 count = Math.max(count, dp[i]);
                 continue;
