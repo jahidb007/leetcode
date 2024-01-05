@@ -11,7 +11,7 @@ class Solution {
         int op = 0;
        
        
-       for (Integer value : map.values()) {
+       for (int value : map.values()) {
          if(value < 2){
              return -1;
          }
@@ -22,6 +22,6 @@ class Solution {
          }
     }
 
-return op;
+        return op;
     }
 }
