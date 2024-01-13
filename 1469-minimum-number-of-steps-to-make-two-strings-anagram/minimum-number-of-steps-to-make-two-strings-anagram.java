@@ -5,12 +5,11 @@ class Solution {
         int[] b = new int[26];
 
         for(char c : s.toCharArray()){
-         
-         a[c - 'a']++;   
+         a[c-'a']++;   
         }
 
         for(char c : t.toCharArray()){
-         b[c - 'a']++;  
+         b[c-'a']++;  
         }
 
         int res = 0;
