@@ -3,7 +3,7 @@ class Solution {
         int[] a = new int[26];
         int[] b = new int[26];
 
-        
+          if (word1.equals(word2))  return true; 
 
         if(word1.length() != word2.length()){
             return false;
