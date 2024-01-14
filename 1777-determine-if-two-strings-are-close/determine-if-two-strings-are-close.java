@@ -3,9 +3,7 @@ class Solution {
         int[] a = new int[26];
         int[] b = new int[26];
 
-        if(word1.equals("a") && word2.equals("b")){
-            return false;
-        }
+        
 
         if(word1.length() != word2.length()){
             return false;
