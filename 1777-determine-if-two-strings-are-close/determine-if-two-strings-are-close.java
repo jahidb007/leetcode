@@ -14,6 +14,7 @@ class Solution {
         }
 
         for(char c : word2.toCharArray()){
+            if(a[ c - 'a'] == 0) return false;
             b[c - 'a']++;
         }
 
