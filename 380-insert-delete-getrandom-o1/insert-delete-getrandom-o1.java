@@ -1,5 +1,6 @@
 class RandomizedSet {
-    Set<Integer> set;
+    private final Random random = new Random();
+    private final Set<Integer> set;
     public RandomizedSet() {
         set = new HashSet<>();
     }
@@ -13,10 +14,8 @@ class RandomizedSet {
     }
     
     public int getRandom() {
-        int idx = (int) (Math.random() * set.size());
-        
         Object[] objects = set.toArray();
-        return (int) objects[idx];
+        return (int) objects[random.nextInt(set.size())];
     }
 }
 
