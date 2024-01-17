@@ -13,7 +13,6 @@ class Solution {
         int next = 0;
         while(val[j] !=0){
             next = val[j];
-            System.out.println("p "+prev+" ; n "+next);
             if(next == prev) return false;
             prev = next;
             j--;
