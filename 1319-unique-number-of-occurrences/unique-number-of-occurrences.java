@@ -1,6 +1,6 @@
 class Solution {
     public boolean uniqueOccurrences(int[] arr) {
-        int[] val = new int[2100];
+        int[] val = new int[2001];
 
         for(int i : arr){
             val[i + 1000]++;
@@ -8,7 +8,7 @@ class Solution {
 
         Arrays.sort(val);
 
-        int j = 2100 - 1;
+        int j = 2001 - 1;
         int prev = -1;
         int next = 0;
         while(val[j] !=0){
