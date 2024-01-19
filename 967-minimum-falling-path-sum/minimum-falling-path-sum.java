@@ -13,11 +13,11 @@ class Solution {
             int m = matrix[0][i] + getDown(1,i -1,l, matrix);
             int n = matrix[0][i] + getDown(1,i ,l, matrix);
             int o = matrix[0][i] + getDown(1,i + 1,l, matrix);
-            System.out.println(m + " " + n + " " +o);
+           // System.out.println(m + " " + n + " " +o);
             dp[0][i] =  Math.min(Math.min(m,n),o);
-            System.out.println("comp "+dp[0][i] + " "+ p);
+        //    System.out.println("comp "+dp[0][i] + " "+ p);
             p = Math.min(dp[0][i], p);
-             System.out.println(p);
+       //      System.out.println(p);
         } 
 
         return p;
