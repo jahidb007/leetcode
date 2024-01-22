@@ -1,6 +1,7 @@
 class Solution {
     public int[] findErrorNums(int[] nums) {
         int n = nums.length;
+        int[] result = new int[2];
         int sum = 0;
         int duplicate = 0;
 
@@ -19,9 +20,10 @@ class Solution {
 
         int missing = trueSum - (sum - duplicate);
 
-        
+        result[0] = duplicate;
+        result[1] = missing;
 
-        return new int[]{duplicate,missing};
+        return result;
     }
 }
 
