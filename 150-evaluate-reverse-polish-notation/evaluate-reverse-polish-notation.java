@@ -4,22 +4,13 @@ class Solution {
         int result = 0;
         for(String s : tokens){
             if(s.equals("*")){
-                int j =st.pop();
-                int i = st.pop();
-                result = i * j;
-                st.push(result);
+                st.push(st.pop() * st.pop());
             }
             else if(s.equals("+")){
-                int j =st.pop();
-                int i = st.pop();
-                result = i + j;
-                st.push(result);
+                st.push(st.pop() + st.pop());
             }
             else if(s.equals("-")){
-                int j =st.pop();
-                int i = st.pop();
-                result = i - j;
-                st.push(result);
+                 st.push(-st.pop() + st.pop());
             }
             else if(s.equals("/")){
                 int j =st.pop();
