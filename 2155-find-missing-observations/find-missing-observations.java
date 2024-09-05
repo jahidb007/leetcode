@@ -30,12 +30,19 @@ class Solution {
 
         Arrays.fill(result, base);
 
-        
+        int st = 0;
 
-        if(rem != 0){
-            for(int i = 0 ; i < rem; i++){
-                result[i] = result[i] + 1;
+        while(rem !=0 ){
+            int max = 6 - result[st];
+            if(max <= rem){
+                result[st] = result[st] + max;
+                rem = rem - max;
+            }else{
+                result[st] = result[st] + rem;
+                rem = 0;
             }
+
+            st++;
         }
 
         return result;
