@@ -3,13 +3,11 @@ class Solution {
         int m = rolls.length;
 
         int totalValue = (m  + n) * mean;
-        System.out.println(totalValue);
         int sum = 0;
         for(int val : rolls){
             sum += val;
         } 
 
-        System.out.println(sum);
 
         int diff = totalValue - sum;
 
@@ -17,14 +15,11 @@ class Solution {
             return new int[0];
         }
 
-        System.out.println(diff);
 
        
         int base = diff / n;
         int rem = diff % n;
 
-        System.out.println(base);
-        System.out.println(rem);
 
         if( base > 6 || (base == 6 && rem != 0) || diff < n ){
             return new int[0];
