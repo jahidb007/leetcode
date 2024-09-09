@@ -20,34 +20,34 @@ class Solution {
         }
         int div = len / k;
         int rem = len % k;
-
         ListNode[] result = new ListNode[k];
 
-        curr = head;
-        ListNode prev = curr;
+        ListNode temp = head;
+        int p = 0;
+        int count = 0;
         
         for(int i = 0 ; i < k ; i++){
-            
-            ListNode newPart = curr;
+            if(temp == null){
+                break;
+            }
+            ListNode t = temp;
+            result[i] = t;
+            for(int j = 0 ; j < div ; j++){
+                t = temp;
+                temp = temp.next;
+                
+            }
 
-            int currSize = div;
-            if(rem > 0){
+            if(rem > 0 ){
                 rem--;
-                currSize++;
+                t = temp;
+                temp = temp.next;
+               
             }
 
-            int j = 0;
-            while(j < currSize){
-                prev = curr;
-                curr = curr.next;
-                j++;
+            if(t != null){
+                t.next = null;
             }
-
-            if(prev != null){
-                prev.next = null;
-            }
-
-            result[i] = newPart;
             
         }
 
