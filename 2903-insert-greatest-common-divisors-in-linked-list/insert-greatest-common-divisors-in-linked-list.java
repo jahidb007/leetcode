@@ -17,7 +17,6 @@ class Solution {
             int next = curr.next.val;
             int gcd = gcd(prev, next);
             ListNode ins = new ListNode(gcd);
-            System.out.println(gcd);
             
             prev = curr.next.val;
             
