@@ -15,14 +15,6 @@ class Solution {
         for( i = 1 ; i < data.length ; i++){
             int diff = data[i] - data[i-1];
           
-            
-            if(1439 - diff < diff){
-                diff = 1440 - diff;
-            }
-            
-            if(diff > 720){
-                diff = 720 - diff;
-            }
 
             if(diff == 0 ){
                 return 0;
@@ -38,10 +30,6 @@ class Solution {
        int diff = data[data.length - 1] - data[0];
         if(1439 - diff < diff){
                 diff = 1440 - diff;
-            }
-            
-            if(diff > 720){
-                diff = 720 - diff;
             }
 
             if(diff < min){
