@@ -15,7 +15,7 @@ class Solution {
         }
 
         if(rem > 0){
-            sb.append(Integer.toString(rem));
+            sb.append(rem);
             ind++;
         }
 
