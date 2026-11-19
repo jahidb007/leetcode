@@ -7,11 +7,11 @@ class Solution {
 
         Arrays.sort(nums);
 
-        int result = nums[l-1] - nums[2];
-        result = (nums[l-3] - nums[0]) > result ? result : nums[l-3] - nums[0];
-        result = (nums[l-2] - nums[1]) > result ? result :  (nums[l-2] - nums[1]);
+        int f = nums[l-1] - nums[2];
+        int s = nums[l-3] - nums[0];
+        int t = nums[l-2] - nums[1];
 
-        return result;
+        return Math.min(f, Math.min(s,t));
 
     }
 }
